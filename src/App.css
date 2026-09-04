@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Poppins:wght@300;400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #222;
+  overflow-x: hidden;
+}
+
+/* ================= HEADER ================= */
+
+.header {
+  width: 100%;
+  height: 115px;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* TASTY BURGER LOGO */
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 39px;
+  line-height: 0.85;
+  letter-spacing: -1px;
+}
+
+.logo span:first-child {
+  color: #a90e14;
+}
+
+.logo span:last-child {
+  color: #f28a00;
+}
+
+/* NAVIGATION */
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+nav a {
+  color: #222;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 21px;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #e30613;
+}
+
+/* CART */
+
+.cart {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart span {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+
+  width: 20px;
+  height: 20px;
+
+  background: #e30613;
+  color: white;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+  text-align: center;
+  padding: 45px 20px 48px;
+}
+
+.hero h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 57px;
+  font-weight: 700;
+  color: #e30613;
+  letter-spacing: 1px;
+  margin-bottom: 22px;
+}
+
+.hero p {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+
+  color: #999;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.65;
+}
+
+/* ================= BURGER SECTION ================= */
+
+.burger-section {
+  width: 100%;
+  padding: 0 32px 40px;
+}
+
+.burger-grid {
+  width: 100%;
+
+  display: grid;
+
+  /* IMPORTANT: prevents horizontal overflow */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 30px;
+}
+
+/* ================= CARD ================= */
+
+.burger-card {
+  min-width: 0;
+  background: #fff;
+
+  border: 1px solid #d8d8d8;
+  border-radius: 9px;
+
+  overflow: hidden;
+
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* BURGER IMAGE */
+
+.burger-card img {
+  width: 100%;
+  height: 267px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+/* CARD CONTENT */
+
+.card-content {
+  padding: 18px 17px 20px;
+}
+
+/* RATING + HEART */
+
+.rating-row {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+}
+
+.stars {
+  color: #f5b51b;
+  font-size: 23px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.heart {
+  border: none;
+  background: transparent;
+
+  color: #888;
+
+  font-size: 34px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.heart:hover {
+  color: #e30613;
+}
+
+/* BURGER NAME */
+
+.burger-card h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+
+  color: #111;
+
+  margin: 5px 0 9px;
+}
+
+/* DESCRIPTION */
+
+.burger-card p {
+  color: #999;
+
+  font-size: 15px;
+  line-height: 1.6;
+
+  min-height: 48px;
+}
+
+/* PRICE */
+
+.price {
+  margin-top: 18px;
+
+  padding: 10px 15px;
+
+  border: none;
+  border-radius: 5px;
+
+  background: #71301f;
+
+  color: #ffbf00;
+
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.price:hover {
+  background: #542216;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+  .header {
+    padding: 0 25px;
+  }
+
+  nav {
+    gap: 25px;
+  }
+
+  .burger-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    height: auto;
+    padding: 25px 20px;
+
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  nav {
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  nav a {
+    font-size: 17px;
+  }
+
+  .hero {
+    padding: 35px 20px 40px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
+  .hero p {
+    font-size: 15px;
+  }
+
+  .burger-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .burger-section {
+    padding: 0 20px 30px;
+  }
+}
